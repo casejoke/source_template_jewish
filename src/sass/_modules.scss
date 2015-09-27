@@ -4,7 +4,7 @@ Sections
 
 .main {
 	position: relative;
-	background-color: #000000;
+	background-color: #FFFFFF;
 	z-index: 1;
 }
 
@@ -14,9 +14,9 @@ Sections
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
   &.module-small {
 
   }
@@ -30,6 +30,9 @@ Sections
         background-attachment: fixed;
     }
     
+  }
+  &.module-text-white{
+  	color: #FFF;
   }
 }  
 
@@ -105,25 +108,7 @@ Sections
 	margin: 0;
 }
 
-/* Half-image */
 
-.side-image {
-	position: absolute;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-}
-
-.side-image-text {
-	background: #fff;
-	border-top: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	padding: 140px 60px 140px;
-}
 
 /* -------------------------------------------------------------------
 Footer

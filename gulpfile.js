@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 var sass    = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
-var autoprefix = require('gulp-autoprefixer');
+var prefix = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
 var stripDebug = require('gulp-strip-debug');
 var clean = require('gulp-clean');
@@ -31,12 +31,19 @@ var source_sass     = './src/sass/styles.scss';
 
 
 //custom destination
-var destination         = '../catalog/view/theme/' + name + '/assets/';
+var destination         = '../catalog/view/theme/' + name + '/assets/*';
 var destination_css     = '../catalog/view/theme/' + name + '/assets/css/';
 var destination_js      = '../catalog/view/theme/' + name + '/assets/js/';
 var destination_fonts   = '../catalog/view/theme/' + name + '/assets/fonts/';
 var destination_image   = '../catalog/view/theme/' + name + '/assets/css/img';
 
+//clean task
+gulp.task('clean', function() {
+    return gulp.src(destination,{
+            read:false
+        })
+        .pipe(clean({force: true}));
+});
 // tasks copy font-awesome 
 gulp.task('copyfontawesome', function() {
     return gulp.src('./bower_components/font-awesome/fonts/*')
@@ -51,13 +58,7 @@ gulp.task('copyfontglyphicon', function() {
             message: 'copy - DONE!'
     }));
 });
-//clean task
-gulp.task('clean', function() {
-    return gulp.src(destination,{
-            read:false
-        })
-        .pipe(clean({force: true}));
-});
+
 
 //sass task
 gulp.task('sass', function() {
@@ -67,15 +68,7 @@ gulp.task('sass', function() {
         .pipe(sass({
            errLogToConsole: true
         }).on('error', sass.logError))
-       /* .pipe(autoprefix(
-            'Android >= ' + browsers.android,
-            'Chrome >= ' + browsers.chrome,
-            'Firefox >= ' + browsers.firefox,
-            'Explorer >= ' + browsers.ie,
-            'iOS >= ' + browsers.ios,
-            'Opera >= ' + browsers.opera,
-            'Safari >= ' + browsers.safari
-        ))*/
+        .pipe(prefix("last 2 version", "> 1%"))
         .pipe(rename(name+'.css'))
         .pipe(gulp.dest(destination_css))
         .pipe(minifycss())
@@ -149,9 +142,7 @@ gulp.task('jshint', function() {
 //});
 
 // default gulp task
-gulp.task('default', function() {
-   gulp.run('copyfontawesome','sass', 'scripts'); 
-});
+gulp.task('default', ['copyfontawesome','sass', 'scripts']);
 // default gulp task
 gulp.task('watch', function() {
     gulp.watch('./src/scripts/*.js', ['jshint','scripts']);
