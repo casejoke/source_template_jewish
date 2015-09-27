@@ -1,3 +1,151 @@
-.modules{
-	background: #FF0;
+/* -------------------------------------------------------------------
+Sections
+------------------------------------------------------------------- */
+
+.main {
+	position: relative;
+	background-color: #000000;
+	z-index: 1;
+}
+
+.module{
+  padding: 120px 0 0px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  &.module-small {
+
+  }
+  &.module-hero{
+    padding: 60px 0px 0px!important;
+    margin: 0px!important;
+  }
+  &.module-parallax {
+    background-attachment: scroll;
+    @media (min-width: $screen-md-min){
+        background-attachment: fixed;
+    }
+    
+  }
+}  
+
+
+
+.module-title {
+	position: relative;
+	letter-spacing: 4px;
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	color: #111;
+	margin: 0 0 70px;
+}
+
+.module-subtitle {
+	text-align: center;
+	font-size: 16px;
+	color: #111;
+	margin-bottom: 70px;
+}
+
+.module-icon {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.module-title + .module-subtitle {
+	margin-top: -35px;
+}
+
+/* Restaurant module header */
+
+.alt-module-subtitle {
+	display: table;
+}
+
+.alt-module-subtitle h5 {
+	display: table-cell;
+	white-space: pre;
+	padding: 0 8px;
+	color: #111;
+}
+
+.holder-w {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	height: 1px;
+	width: 50%;
+}
+
+.holder-w:before {
+	border-top: 1px solid #eaeaea;
+	position: relative;
+	display: block;
+	content: "";
+	top: 1px;
+	height: 1px;
+	width: 100%;
+}
+
+/* Sections dividers */
+
+.divider-w {
+	border-top: 1px solid #eaeaea;
+	margin: 0;
+}
+
+.divider-d {
+	border-top: 1px solid #202020;
+	margin: 0;
+}
+
+/* Half-image */
+
+.side-image {
+	position: absolute;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.side-image-text {
+	background: #fff;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 140px 60px 140px;
+}
+
+/* -------------------------------------------------------------------
+Footer
+------------------------------------------------------------------- */
+
+.footer {
+	padding: 10px 0;
+}
+
+.copyright {
+	margin: 0;
+}
+
+.footer-social-links {
+	text-align: right;
+}
+
+.footer-social-links a {
+	display: inline-block;
+	padding: 0 6px;
+}
+
+.ajax-response {
+	text-align: center;
 }
