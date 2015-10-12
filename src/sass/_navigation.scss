@@ -41,28 +41,71 @@ Navbar
 	    padding-top: 15px;
 	    padding-bottom: 15px;
 	    background: transparent;
+
 	    .navbar-header{
 			.navbar-brand {
-		        margin-top: -15px;
+		        margin-top: -8px;
 		        @media (min-width: $screen-sm-min) {
-		             margin-top: -15px;
+		             margin-top: -8px;
 		        }
 		        img{
 		        	height: 55px;
 		        }
 		    }
 		}
-	       
+	}
+	.nav{
+		li {
+			a{ 
+				position: relative;
+				color: #fff;
+	  -webkit-transition: color 0.125s ease-in-out 0s;
+	     -moz-transition: color 0.125s ease-in-out 0s;
+	      -ms-transition: color 0.125s ease-in-out 0s;
+	       -o-transition: color 0.125s ease-in-out 0s;
+		      transition: color 0.125s ease-in-out 0s;
+		      &:hover,
+		      &:focus{
+				background: none;
+				color: #fff;
+		      }
+			}
+		}
+	}
+	&.navbar-light{
+
+		.nav{
+			li {
+				a{ 
+					color:#000;
+				&:hover,
+				&:focus{
+					background: none;
+					color: #000;
+					}
+				}
+			}
+		}
+		
+	}
+	&.navbar-dark{
+		background-color: rgba(10, 10, 10, .9)!important;
+		.nav{
+			li {
+				a{ 
+					color:#FFF;
+				&:hover,
+				&:focus{
+					background: none;
+					color: #FFF;
+					}
+				}
+			}
+		}
+		
 	}
 }
 
-.navbar a {
-	-webkit-transition: color 0.125s ease-in-out 0s;
-	   -moz-transition: color 0.125s ease-in-out 0s;
-		-ms-transition: color 0.125s ease-in-out 0s;
-		 -o-transition: color 0.125s ease-in-out 0s;
-			transition: color 0.125s ease-in-out 0s;
-}
 
 .navbar-custom .dropdown-menu {
 	background: rgba(26, 26, 26, .9);
@@ -75,10 +118,6 @@ Navbar
 
 
 
-.navbar-custom .nav li > a {
-	position: relative;
-	color: rgba(255, 255, 255, .7);
-}
 
 .navbar-custom .dropdown-menu > li > a {
 	border-bottom: 1px solid rgba(73, 71, 71, 0.15) !important;
@@ -102,8 +141,7 @@ Navbar
 	left: auto;
 }
 
-.navbar-custom .nav > li > a:focus,
-.navbar-custom .nav > li > a:hover,
+
 .navbar-custom .nav .open > a,
 .navbar-custom .nav .open > a:focus,
 .navbar-custom .nav .open > a:hover,

@@ -6,11 +6,12 @@ var transitions_av = true;
 var min_window_h = 650;
 var navbar = $('.navbar-custom'),
 	navHeight   = navbar.height(),
-    modules = $('.module-hero, .module, .module-small'),
+    modules = $('.module---hero, .module, .module---small'),
     windowWidth = Math.max($(window).width(), window.innerWidth),
     navbatTrans;
 var visual = {
     init: function() {
+        visual.initColorNavbar(navbar);
         visual.navbarCheck(navbar);
         visual.navbarAnimation(navbar);
         visual.moduleInit(); //
@@ -60,17 +61,17 @@ var visual = {
             /* ---------------------------------------------- /*
 			 * Set height module
 			/* ---------------------------------------------- */
-            if ($(this).hasClass('module-hero')) {
+            if ($(this).hasClass('module--hero')) {
                 if ($(window).height() > min_window_h) {
-                    $(this).height($(window).height() *0.4);
+                    $(this).height($(window).height() *0.6);
                 } else {
-                    $(this).height(min_window_h *0.4);
+                    $(this).height(min_window_h *0.6);
                 }
             }
             /* ---------------------------------------------- /*
 			 * Set full-height module
 			/* ---------------------------------------------- */
-            if ($(this).hasClass('module-full-height')) {
+            if ($(this).hasClass('module--full-height')) {
                 if ($(window).height() > min_window_h) {
                     $(this).height($(window).height() - 120);
                 } else {
@@ -81,13 +82,13 @@ var visual = {
 			 * Set parallax module
 			/* ---------------------------------------------- */
             if (mobile === true) {
-                if ($(this).hasClass('.module-parallax')) {
+                if ($(this).hasClass('.module--parallax')) {
                     $(this).css({
                         'background-attachment': 'scroll'
                     });
                 }
             } else {
-                if ($(this).hasClass('.module-parallax')) {
+                if ($(this).hasClass('.module--parallax')) {
                     $(this).css({
                         'background-attachment': 'fixed'
                     });
@@ -97,14 +98,14 @@ var visual = {
     },
     moduleResize: function() {
         modules.each(function() {
-            if ($(this).hasClass('module-hero')) {
+            if ($(this).hasClass('module--hero')) {
                 if ($(window).height() > min_window_h) {
-                    $(this).height($(window).height() *0.4);
+                    $(this).height($(window).height() *0.6);
                 } else {
-                    $(this).height(min_window_h *0.4);
+                    $(this).height(min_window_h *0.6);
                 }
             }
-            if ($(this).hasClass('module-full-height')) {
+            if ($(this).hasClass('module--full-height')) {
                 if ($(window).height() > min_window_h) {
                     $(this).height($(window).height() - 120);
                 } else {
@@ -113,6 +114,11 @@ var visual = {
             }
         });
 
+    },
+    initColorNavbar:function(navbar){
+        if ($('.module--initnavbar').attr('data-navbar')) {
+            navbar.addClass($('.module--initnavbar').attr('data-navbar'));
+        }
     },
     navbarAnimation: function(navbar) {
     	/* ---------------------------------------------- /*

@@ -68,7 +68,7 @@ gulp.task('sass', function() {
         .pipe(sass({
            errLogToConsole: true
         }).on('error', sass.logError))
-        .pipe(prefix("last 2 version", "> 1%"))
+        //.pipe(prefix("last 2 version", "> 1%"))
         .pipe(rename(name+'.css'))
         .pipe(gulp.dest(destination_css))
         .pipe(minifycss())

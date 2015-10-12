@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------
-Sections
+modules
 ------------------------------------------------------------------- */
 
 .main {
@@ -17,26 +17,62 @@ Sections
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
-  &.module-small {
-
+  &.module--small {
+	  padding: 70px 0px;
   }
-  &.module-hero{
+  &.module--no-padding {
+	  padding: 0px;
+  }
+  &.module--hero{
     padding: 60px 0px 0px!important;
     margin: 0px!important;
   }
-  &.module-parallax {
+  &.module--parallax {
     background-attachment: scroll;
     @media (min-width: $screen-md-min){
         background-attachment: fixed;
     }
     
   }
-  &.module-text-white{
+  .module-heading{
+	&.module-heading--text-light{
+		color: #FFF;
+	}
+	&.module-heading--text-dark{
+		color: #000;
+	}
+  	.module-heading__module-title {
+		font-size: 18px;
+		letter-spacing: 1px;
+		@media (min-width: $screen-sm-min){
+		  font-size: 28px;
+		  letter-spacing: 2px;
+		}
+	}
+	.module-heading__module-subtitle {
+		font-size: 14px;
+		@media (min-width: $screen-sm-min){
+		  font-size: 18px;
+		}
+	}
+  }
+  &.module--footer {
+	  padding: 70px 0px;
+  }
+  &.module--min-footer {
+	  padding: 10px 0px;
+  }
+  &.module--bg-dark{
+  	background: #111;
   	color: #FFF;
+  	a{
+  		color: #FFF;
+  	}
   }
 }  
-
-
+/* -------------------------------------------------------------------
+end modules
+------------------------------------------------------------------- */
 
 .module-title {
 	position: relative;
@@ -47,6 +83,7 @@ Sections
 	color: #111;
 	margin: 0 0 70px;
 }
+
 
 .module-subtitle {
 	text-align: center;
@@ -109,28 +146,3 @@ Sections
 }
 
 
-
-/* -------------------------------------------------------------------
-Footer
-------------------------------------------------------------------- */
-
-.footer {
-	padding: 10px 0;
-}
-
-.copyright {
-	margin: 0;
-}
-
-.footer-social-links {
-	text-align: right;
-}
-
-.footer-social-links a {
-	display: inline-block;
-	padding: 0 6px;
-}
-
-.ajax-response {
-	text-align: center;
-}
