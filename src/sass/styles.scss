@@ -1,6 +1,13 @@
 @import "_font";
 @import "_bootstrap";
-@import 'modules';
+
 @import "template/rival";
+@import 'modules';
+@import 'buttons';
+@import 'price';
+@import 'account';
 @import 'navigation';
 @import 'footer';
+@import "../../bower_components/eonasdan-bootstrap-datetimepicker/src/sass/_bootstrap-datetimepicker.scss";
+@import "../../bower_components/summernote/src/sass/summernote.scss";
+@import 'fix';

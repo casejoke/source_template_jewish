@@ -17,9 +17,9 @@ var visual = {
         visual.moduleInit(); //
         visual.scaleContent();
         
-        document.ontouchmove = function(event) {
+       // document.ontouchmove = function(event) {
             // event.preventDefault();
-        }
+        //}
         if (!Modernizr.csstransitions || !Modernizr.cssanimations) {
             transitions_av = false;
             $.fn.transition = $.fn.animate;
@@ -38,8 +38,11 @@ var visual = {
 			}, 1000);
 
 		});
+        $(document).on(mouse_down,'.dropdown-toggle',function(e){
+            e.preventDefault();
 
-       
+        });
+        
 
 
     },

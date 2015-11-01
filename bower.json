@@ -21,7 +21,7 @@
     "open-sans-fontface": "~1.2.1",
     "isotope": "~2.2.0",
     "svg-loaders": "*",
-    "summernote": "~0.6.7",
+    "summernote": "~0.6.16",
     "moment": "~2.10.3",
     "eonasdan-bootstrap-datetimepicker": "~4.14.30",
     "bootstrap-sweetalert": "~0.4.3",
@@ -37,5 +37,4 @@
     "jquery-file-upload": "~9.10.5",
     "ionsound": "~3.0.6"
   }
-  
 }

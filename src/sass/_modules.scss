@@ -9,7 +9,8 @@ modules
 }
 
 .module{
-  padding: 120px 0 0px;
+  padding: 60px 0 0px;
+
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;
@@ -17,11 +18,17 @@ modules
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
+  	@media (min-width: $screen-sm-min){
+	    padding: 120px 0 0px;
+	}
   &.module--small {
 	  padding: 70px 0px;
   }
   &.module--no-padding {
 	  padding: 0px;
+  }
+  &.module--content{
+  	padding-bottom: 70px;
   }
   &.module--hero{
     padding: 60px 0px 0px!important;

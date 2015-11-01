@@ -38,18 +38,43 @@ Navbar
 	
     /* Navbar transparent */
 	&.navbar-transparent {
-	    padding-top: 15px;
-	    padding-bottom: 15px;
+	    padding-top: 0px;
+	    padding-bottom: 0px;
 	    background: transparent;
-
+	    .open{
+			.dropdown-menu{
+				border:1px solid #FFF; 
+			}
+		}
+		@media (min-width: $screen-sm-min){
+		    padding-top: 15px;
+	    	padding-bottom: 15px;
+	    	.open{
+				.dropdown-menu{
+					
+				}
+			}
+		}
+		
 	    .navbar-header{
 			.navbar-brand {
-		        margin-top: -8px;
+		        margin-top: 0px;
 		        @media (min-width: $screen-sm-min) {
-		             margin-top: -8px;
+	             	margin-top: -5px;
+		        }
+	         	@media (min-width: $screen-md-min) {
+	              	margin-top: -8px;
 		        }
 		        img{
-		        	height: 55px;
+		        	height: 40px;
+		        	@media (min-width: $screen-sm-min) {
+
+			            height: 42px;
+			        }
+			        @media (min-width: $screen-md-min) {
+			            height: 55px;
+			        }
+		        	
 		        }
 		    }
 		}
@@ -108,7 +133,7 @@ Navbar
 
 
 .navbar-custom .dropdown-menu {
-	background: rgba(26, 26, 26, .9);
+	background: rgba(26, 26, 26, 1);
 	border-radius: 0;
 	border: 0;
 	padding: 0;
