@@ -9,6 +9,9 @@ var navbar = $('.navbar-custom'),
     modules = $('.module---hero, .module, .module---small'),
     windowWidth = Math.max($(window).width(), window.innerWidth),
     navbatTrans;
+
+
+
 var visual = {
     init: function() {
         visual.initColorNavbar(navbar);
@@ -42,6 +45,17 @@ var visual = {
             e.preventDefault();
 
         });
+        
+        if($('#filter').length >0){
+            $('#filter').on('affix.bs.affix', function () {
+              console.log('affix.bs.affix');
+              $('#filter').addClass('col-sm-4').addClass('col-md-3');
+            });
+             $('#filter').on('affix-top.bs.affix', function () {
+              console.log('affix-top.bs.affix');
+              $('#filter').removeClass('col-sm-4').removeClass('col-md-3');
+            });
+        }
         
 
 

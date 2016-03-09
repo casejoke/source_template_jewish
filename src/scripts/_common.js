@@ -13,4 +13,5 @@ $(window).on('load', function(){
 });
 $(window).on('scroll', function(){
     visual.scrolling();
+   
 });
