@@ -36,5 +36,9 @@
     "jquery.ui.touch-punch.dk": "~0.3.3",
     "jquery-file-upload": "~9.10.5",
     "ionsound": "~3.0.6"
+  },
+  "dependencies": {
+    "isotope": "^2.2.2",
+    "mixitup": "^2.1.11"
   }
 }

@@ -73,7 +73,9 @@
 .btn.btn-d:focus {
 	background: rgba(17, 17, 17, 1);
 }
-
+.btn.btn-d.active{
+	background: rgba(17, 17, 17, 1);
+}
 .btn.btn-b {
 	background: rgba(17, 17, 17, 1);
 	color: #fff;

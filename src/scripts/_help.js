@@ -24,5 +24,9 @@ var help = {
 			});
 		}
 
-	}
+	},
+  filters:function(){
+
+  }
 };
+
