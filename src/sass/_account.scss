@@ -22,3 +22,91 @@ Acccount
 		}
 	}
 }
+/* -------------------------------------------------------------------
+Group
+------------------------------------------------------------------- */
+.customers-list{
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			min-height: 163px;
+			.alt-features-item{
+				padding-left: 105px;
+				.alt-features-icon{
+					&.alt-features-icon--image{
+						width: 100px;
+						img{
+							width: 100px;
+						}
+					}
+				}
+			}
+
+
+		}
+	}
+}
+/* -------------------------------------------------------------------
+Customers
+------------------------------------------------------------------- */
+.projects-list{
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: -webkit-flex;
+		    display: -ms-flexbox;
+		    display: flex;
+			.project{
+				width: 100%;
+				min-height: 140px;
+			    position: relative;
+			    z-index: 11;
+			    padding: 20px 0 20px 200px;
+			    -webkit-transition: all .2s;
+			    -moz-transition: all .2s;
+			    transition: all .2s;
+			    &:before {
+			    	content: '';
+				    display: block;
+				    position: absolute;
+				    top: 5px;
+				    left: -15px;
+				    right: -15px;
+				    bottom: 5px;
+				    z-index: -1;
+				    -webkit-transition: all .2s;
+				    -moz-transition: all .2s;
+				    transition: all .2s;
+			    }
+			    &:hover{
+			    	position: relative;
+				    z-index: 12;
+				    border-color: #fff;
+				    -webkit-transform: translateY(-5px);
+				    -moz-transform: translateY(-5px);
+				    transform: translateY(-5px);
+				    &:before {
+					    background: #fff;
+					    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.3);
+					    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.3);
+					    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+					}
+			    }
+			    img{
+			    	position: absolute;
+				    top: 20px;
+				    left: 0;
+			    }
+			    .post-meta{
+			    	display: block;
+			    	    clear: both;
+			    }
+			}
+
+		}
+	}
+}

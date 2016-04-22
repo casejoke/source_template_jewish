@@ -35,7 +35,8 @@
     "jquery.transit": "~0.9.12",
     "jquery.ui.touch-punch.dk": "~0.3.3",
     "jquery-file-upload": "~9.10.5",
-    "ionsound": "~3.0.6"
+    "ionsound": "~3.0.6",
+    "list.js": "~1.2.0"
   },
   "dependencies": {
     "isotope": "^2.2.2",
